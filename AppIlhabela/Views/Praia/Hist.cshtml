@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Hist";
+}
+
+@model AppIlhabela.Models.História
+
+
+<div class="container">
+    <center>
+        <img src="@Url.Content("~/img/hist1.jpg")" alt="1" style="width: 350px; height: 200px;  " />
+        <img src="@Url.Content("~/img/hist2.jpg")" alt="2" style="width: 225px; height: 200px;  " />
+        <img src="@Url.Content("~/img/hist4.jpg")" alt="3" style="width: 350px; height:200px;  " />
+        <br /><br />
+        <center><h1>História de IlhaBela</h1></center>
+        <p>@Model.historia</p>
+        <br />
+        <center><h1>Da onde vem o nome IlhaBela?</h1></center>
+    <p>@Model.historiaNome</p>
+        <br />
+        <center><h1>Como está hoje em dia?</h1></center>
+    <p>@Model.evoluçao</p>
+    </center>
+</div>
+
+<style>
+    body {
+        background-color: #5685B1;
+        color: white;
+    }
+
+    h1 {
+        padding: 7px;
+        font-size: 45px;
+        color: white;
+        margin-bottom:10px;
+    }
+    p{
+        font-size: 23px;
+        color: white;
+    }
+
+    img {
+        padding: 10px;
+        margin: 10px;
+    }
+</style>

@@ -1,0 +1,169 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div id="tit">
+    <h2>COMPARTILHE SUA <b>EXPERIÊNCIA</b></h2><br />
+    <h3 >com os outros usuários do app!</h3>
+</div>
+
+    <!-- Caixa de mensagem e avaliação estáticos -->
+    <div class="caixa-avaliacao">
+        <textarea placeholder="Deixe uma mensagem..."></textarea>
+        <br /><br />
+        <label>Avalie sua experiência:</label>
+        <select>
+            <option value="1">1 estrela</option>
+            <option value="2">2 estrelas</option>
+            <option value="3">3 estrelas</option>
+            <option value="4">4 estrelas</option>
+            <option value="5">5 estrelas</option>
+        </select>
+    <br /><br />
+        <label>Faça o upload de um arquivo...</label>
+        <input id="arq" type="file"/>
+    <br /><br />
+    <center><input type="submit"/></center>
+    </div>
+
+    <hr />
+
+    <!-- Exibição Estática de Avaliações -->
+<center><h3>Veja as postagens e avaliações de pessoas que seguiram nossas dicas:</h3></center>
+
+    <div class="avaliacao">
+        <!-- Avaliação 1 -->
+        <div class="avaliacao">
+        <img src="@Url.Content("~/img/ava1.jpeg")" alt="1" style="width: 700px;   " />
+            <p id="ava">"Uma experiência incrível! As dicas realmente ajudaram a aproveitar ao máximo a viagem."</p>
+            <p id ="avaN">Praia da Feiticeira</p>
+            <p id="est"> ★★★★★</p>
+        </div>
+        <br />
+        <!-- Avaliação 2 -->
+        <div class="avaliacao">
+        <img src="@Url.Content("~/img/ava2.jpeg")" alt="1" style="width: 700px;   " />
+        <p id="ava">"Comida deliciosa, ambiente super agradável! Recomendo o Restaurante Bolo Mar."</p>
+        <p id ="avaN">Restaurante Bolo Mar</p>
+            <p id="est">★★★★☆</p>
+        </div>
+    </div>
+
+<style>
+
+    #tit{
+        float:left;
+        justify-content:left;
+        text-align: center;
+        margin-top: 35px;
+        margin-left: 40px;
+    }
+       
+    body {
+        background-color: #5685B1;
+        color: white;
+    }
+
+    #ava {
+        color: white;
+        text-align:center;
+    }
+
+    .avaliacao{
+        position: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #est{
+        color: yellow;
+        float: left;
+    }
+
+    #avaN{
+        color: white;
+        float: right;
+    }
+
+    h2{
+        color: white;
+        float: left;
+        justify-content:left;
+        text-align: center;
+
+    }
+    h3{
+        color:white;
+        float: left;
+        justify-content: left;
+        margin-left: 70px;
+    }
+    b{
+        color: #05335E;
+    }
+
+    .caixa-avaliacao {
+        background: #D9D9D9;
+        color: #756161;
+        margin-bottom: 20px;
+        float: right;
+        justify-content: right;
+        width: 500px;
+        height: auto;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    textarea{
+        border-radius: 10px;
+        height:40px;
+        width:300px;
+        border: 0;
+        font-size: 15px;
+    }
+
+    label{
+        font-size:15px;
+    }
+
+    #arq{
+        width: 250px;
+        border-radius: 10px;
+        border: 0;
+        height: auto;
+        background-color: #05335E;
+        color: white;
+        float: right;
+        justify-content: right;
+        font-size: 10px;
+    }
+
+    select{
+        width: 100px;
+        border-radius: 10px;
+        height: auto;
+        background-color: #05335E;
+        color: white;
+        font-size: 15px;
+    }
+
+    input{
+        width:100px;
+        border-radius: 10px;
+        height: auto;
+        background-color: #05335E;
+        color: white;
+    }
+    .avaliacao {
+        display: inline-block;
+        margin: 10px;
+        text-align: center;
+        border: 0;
+        padding: 10px;
+        width: 700px;
+        margin-left: 100px;
+    }
+</style>
+
+

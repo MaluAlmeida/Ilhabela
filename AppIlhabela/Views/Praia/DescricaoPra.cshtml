@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "DescricaoPra";
+}
+
+@model AppIlhabela.Models.Praias
+
+
+<div class="container">
+    <center>
+        <img src="@Url.Content("~/img/feit1.jpg")" alt="1" style="width: 400px;   " />
+        <img src="@Url.Content("~/img/feit2.jpg")" alt="2" style="width: 225px;   " />
+        <img src="@Url.Content("~/img/feit3.jpg")" alt="3" style="width: 300px;   " />
+        <h1>@Model.nome</h1>
+        <p id="subt">@Model.subtit</p>
+        <br />
+        <p>@Model.descriçao</p>
+    </center>
+    <br /><br />
+    <h2>Como Chegar</h2>
+    <ul>
+        @foreach (var item in Model.chegar)
+        {
+            <li>
+                <h3>@item.titulo :</h3>
+                <p id="desc">@item.descriçao</p>
+                <br />
+
+            </li>
+        }
+
+
+    </ul>
+</div>
+
+
+<style>
+    body {
+        background-color: #5685B1;
+        color: white;
+    }
+     h1{
+         padding: 7px;
+         font-size: 45px;
+        color: white;
+     }
+
+     h2{
+        font-size: 27px;
+        font-weight: bold;
+        color: white;
+     }
+
+     h3{
+        font-size: 23px;
+        font-weight: bold;
+        color: white;
+     }
+
+     #subt {
+        color: white;
+        font-size: 24px;
+     }
+     #desc{
+         color:white;
+         font-size: 25px;
+     }
+
+     p{
+        font-size:23px;
+        color: white;
+     }
+
+     img {
+         padding: 10px;
+         margin: 10px;
+     }
+</style>
+
+

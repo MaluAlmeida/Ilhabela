@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Praias";
+}
+
+<head>
+    <link href="~/css/praias.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <br />
+    <center><p id="titulo" style=" font-weight: 500; font-size:26px; padding-top:15px;">CONHEÇA MAIS SOBRE <b>ILHABELA</b> E SUAS PRAIAS!</p></center>
+
+    <script>
+        function redDescPraia() {
+            //chama a tela do index
+            window.open('Praia/Descricao');
+            //fecha a tela login
+            window.close('Praia/Index');
+            
+        }
+
+          function redDescPraia2() {
+            //chama a tela do index
+            window.open('Praia/DescricaoPra');
+            //fecha a tela login
+            window.close('Praia/Index');
+            
+        }
+
+        function redHist() {
+            //chama a tela do index
+            window.open('Praia/Hist');
+            //fecha a tela login
+            window.close('Praia/Index');
+        }
+
+
+    </script>
+
+
+
+    <section id="praias">
+
+
+        <section id="p1">
+            <img onclick="redHist()" src="@Url.Content("~/img/historia.png")" alt="História" style="width: 400px;   " />
+            <img onclick="redDescPraia()" src="@Url.Content("~/img/castelhanos.png")" alt="História" style="width: 400px; margin-left:60px;" />
+
+        </section>
+
+        <section id="p2">
+
+
+            <img onclick="redDescPraia2()" src="@Url.Content("~/img/feiticeira.png")" alt="História" style="width: 400px; " />
+            <img onclick="redDescPraia()" src="@Url.Content("~/img/pereque.png")" alt="História" style="width: 400px; margin-left:60px;" />
+
+        </section>
+        <section id="p3">
+
+
+            <img onclick="redDescPraia()" src="@Url.Content("~/img/curral.png")" alt="História" style="width: 400px; " />
+            <img onclick="redDescPraia()" src="@Url.Content("~/img/jabaquara.png")" alt="História" style="width: 400px; margin-left:60px; " />
+
+        </section>
+
+
+    </section>
+</body>
+
+<style>
+    {
+
+    }
+</style>

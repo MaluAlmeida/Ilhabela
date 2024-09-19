@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewData["Title"] = "EventDetails";
+}
+
+@model AppIlhabela.Models.ViewEventos
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrição do Evento</title>
+    <link rel="stylesheet" href="~/Content/Site.css" />
+</head>
+<body>
+
+    <section class="event-details">
+        <center><h2>Calendário</h2></center>
+        <div class="calendar">
+            <!-- Calendário com dias e eventos (exemplo simplificado) -->
+           <center><table>
+                <thead>
+                    <tr>
+                        <th>S</th>
+                        <th>T</th>
+                        <th>Q</th>
+                        <th>Q</th>
+                        <th>S</th>
+                        <th>S</th>
+                        <th>D</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int week = 1; week <= 5; week++)
+                    {
+                        <tr>
+                            @for (int day = 1; day <= 7; day++)
+                            {
+                                <td>
+                                    <span class="event-day">@((week - 1) * 7 + day)</span>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            </center>
+        </div>
+
+        <div class="event-info">
+            <center>
+                <h3 class="tits">@Model.Event.nome</h3>
+                <img src="@Model.Event.imagem" alt="Evento" style="width: 300px; border-radius: 5px;" />
+                <p>@Model.Event.descriçao</p>
+            </center>
+            <p><strong class="tits">Data:</strong> @string.Join(", ", Model.Agenda.data)</p>
+            <p><strong class ="tits">Horário:</strong> @Model.Agenda.horario</p>
+            <p><strong class="tits">Local:</strong> @Model.Loc.logradouro</p>
+            <p><strong class="tits">Mais Informações:</strong> <a href="@Model.Event.link">@Model.Event.link</a></p>
+        </div>
+</body>
+</html>
+
+
+
+<style>
+
+    th{
+        padding:15px;
+    }
+
+    tr{
+       padding: 25px;
+    }
+
+    table{
+        padding: 60px;
+        margin-bottom: 20px;
+    }
+
+    body {
+        background-color: #5685B1;
+        color: white;
+    }
+
+    .event-info{
+        background-color: #A8D5FF;
+        border-radius: 20px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        padding-right: 15px;
+        color: #000000;
+    }
+
+
+    .tits{
+        color: #05335E;
+    }
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .event-item {
+        text-align: center;
+    }
+
+        .event-item img {
+            width: 100%;
+            height: auto;
+        }
+</style>
+
+
